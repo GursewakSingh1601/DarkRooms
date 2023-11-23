@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "DarkRooms_backend": {
+      "main": "src/DarkRooms_backend/main.mo",
+      "type": "motoko"
+    },
+    "DarkRooms_frontend": {
+      "dependencies": [
+        "DarkRooms_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/DarkRooms_frontend/src/index.html"
+      },
+      "source": [
+        "src/DarkRooms_frontend/assets",
+        "dist/DarkRooms_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
